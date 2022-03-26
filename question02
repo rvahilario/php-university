@@ -1,0 +1,9 @@
+<?php
+  function calculaNumeroVizinhos($matriz) {
+    $numeroDeVizinhos = array_map(function($linha){
+      return array_sum($linha);
+    }, $matriz);
+    $nosComMaisVizinhos = array_keys($numeroDeVizinhos, max($numeroDeVizinhos));
+    return $nosComMaisVizinhos;
+  }
+?>
